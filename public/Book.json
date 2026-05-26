@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A young shepherd travels the world in search of his destiny and hidden treasure.",
+    "category": "Story",
+    "available_quantity": 8,
+    "image_url": "https://images.unsplash.com/photo-1544947950-fa07a98d237f"
+  },
+  {
+    "id": 2,
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A dystopian novel about surveillance, control, and the struggle for freedom.",
+    "category": "Story",
+    "available_quantity": 5,
+    "image_url": "https://images.unsplash.com/photo-1512820790803-83ca734da794"
+  },
+  {
+    "id": 3,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A classic tale of wealth, ambition, and lost love in the Jazz Age.",
+    "category": "Story",
+    "available_quantity": 7,
+    "image_url": "https://images.unsplash.com/photo-1495640388908-05fa85288e61"
+  },
+  {
+    "id": 4,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "description": "A practical guide to writing maintainable and professional software.",
+    "category": "Tech",
+    "available_quantity": 10,
+    "image_url": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4"
+  },
+  {
+    "id": 5,
+    "title": "JavaScript: The Good Parts",
+    "author": "Douglas Crockford",
+    "description": "Explores the best features and practices of JavaScript programming.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+  },
+  {
+    "id": 6,
+    "title": "Design Patterns",
+    "author": "Erich Gamma",
+    "description": "Introduces reusable solutions to common software design problems.",
+    "category": "Tech",
+    "available_quantity": 4,
+    "image_url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
+  },
+  {
+    "id": 7,
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "description": "Timeless advice for becoming a more effective software developer.",
+    "category": "Tech",
+    "available_quantity": 9,
+    "image_url": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d"
+  },
+  {
+    "id": 8,
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "description": "A fascinating journey through the universe and humanity's place within it.",
+    "category": "Science",
+    "available_quantity": 11,
+    "image_url": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564"
+  },
+  {
+    "id": 9,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "Explains the mysteries of space, time, and black holes.",
+    "category": "Science",
+    "available_quantity": 7,
+    "image_url": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa"
+  },
+  {
+    "id": 10,
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "description": "Explores evolution through the perspective of genes and natural selection.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://images.unsplash.com/photo-1532012197267-da84d127e765"
+  },
+  {
+    "id": 11,
+    "title": "The Origin of Species",
+    "author": "Charles Darwin",
+    "description": "The groundbreaking work introducing the theory of evolution.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "https://images.unsplash.com/photo-1521587760476-6c12a4b040da"
+  },
+  {
+    "id": 12,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A powerful story about justice, morality, and human compassion.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://images.unsplash.com/photo-1516979187457-637abb4f9353"
+  }
+]
