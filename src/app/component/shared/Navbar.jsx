@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/assets/logo.png";
+import NavLink from "./NavLink";
 
 const Navbar = () => {
     return (
@@ -21,13 +22,13 @@ const Navbar = () => {
         {/* Navigation Links */}
         <ul className="flex items-center gap-8 font-medium text-gray-700">
           <li>
-            <Link href="/">Home</Link>
+            <NavLink href="/">Home</NavLink>
           </li>
           <li>
-            <Link href="/allbooks">All Books</Link>
+            <NavLink href="/allbooks">All Books</NavLink>
           </li>
           <li>
-            <Link href="/profile">My Profile</Link>
+            <NavLink href="/profile">My Profile</NavLink>
           </li>
         </ul>
 
