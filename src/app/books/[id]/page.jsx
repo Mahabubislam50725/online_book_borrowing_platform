@@ -20,12 +20,7 @@ const BooksDetails = async ({ params }) => {
 
                         {/* Image */}
                         <div className="relative w-full md:w-80 h-96 md:h-auto shrink-0">
-                            <Image
-                                src={book.image_url}
-                                alt={book.title}
-                                fill
-                                className="object-cover"
-                            />
+                            <Image src={book.image_url} alt={book.title} fill className="object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent md:bg-gradient-to-r" />
                         </div>
 
@@ -50,11 +45,11 @@ const BooksDetails = async ({ params }) => {
 
                                 <div className="grid grid-cols-2 gap-4 mb-8">
                                     <div className="bg-blue-50 rounded-2xl p-4 text-center">
-                                        <p className="text-2xl font-extrabold text-blue-600">{book.available_quantity}</p>
+                                        <p className="text-2xl font-extrabold text-blue-600">{book.available_quantity} copies left</p>
                                         <p className="text-xs text-gray-500 mt-1">Copies Available</p>
                                     </div>
                                     <div className="bg-purple-50 rounded-2xl p-4 text-center">
-                                        <p className="text-2xl font-extrabold text-purple-600">#7700{book.id}</p>
+                                        <p className="text-2xl font-extrabold text-purple-600">#{book.id}</p>
                                         <p className="text-xs text-gray-500 mt-1">Book ID</p>
                                     </div>
                                 </div>

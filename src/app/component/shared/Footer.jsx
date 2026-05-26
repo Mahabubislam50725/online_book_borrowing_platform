@@ -27,7 +27,7 @@ const Footer = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/all-books">All Books</Link>
+              <Link href="/allbooks">All Books</Link>
             </li>
             <li>
               <Link href="/profile">My Profile</Link>
