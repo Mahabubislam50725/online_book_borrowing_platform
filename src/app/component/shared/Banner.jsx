@@ -32,7 +32,7 @@ const Banner = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                        <Link href="/allbook" className="btn bg-gradient-to-r from-purple-500 to-indigo-500 text-white border-none hover:from-purple-600 hover:to-indigo-600 px-8 shadow-lg shadow-purple-900/40">
+                        <Link href="/allbooks" className="btn bg-gradient-to-r from-purple-500 to-indigo-500 text-white border-none hover:from-purple-600 hover:to-indigo-600 px-8 shadow-lg shadow-purple-900/40">
                             Browse Books →
                         </Link>
                         <Link href="/register" className="btn btn-outline text-white border-white border-opacity-30 hover:bg-indigo-600 hover:bg-opacity-10 hover:border-white px-8">
