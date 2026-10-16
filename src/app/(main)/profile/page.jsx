@@ -12,6 +12,12 @@ const ProfilePage = () => {
     const [borrowedCount, setBorrowedCount] = useState(0);
 
     useEffect(() => {
+        if (!isPending && !user) {
+            router.push('/login');
+        }
+    }, [isPending, user, router]);
+
+    useEffect(() => {
         if (user) {
             fetch('/api/borrow')
                 .then(res => res.json())
