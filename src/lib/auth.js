@@ -10,7 +10,10 @@ export const auth = betterAuth({
     database: mongodbAdapter(db, {
         client,
     }),
-    trustedOrigins: [process.env.BETTER_AUTH_URL, "http://localhost:3000"],
+    trustedOrigins: [
+        "https://online-book-borrowing-platform-rn6l.vercel.app",
+        "http://localhost:3000",
+    ],
     emailAndPassword: {
         enabled: true,
     },
