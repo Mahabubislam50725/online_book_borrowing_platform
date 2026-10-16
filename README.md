@@ -44,8 +44,8 @@ A modern web application that digitizes the traditional library experience. User
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/online-book-borrowing-platform.git
-cd online-book-borrowing-platform
+git clone https://github.com/Mahabubislam50725/online_book_borrowing_platform.git
+cd online_book_borrowing_platform
 ```
 
 2. Install dependencies
