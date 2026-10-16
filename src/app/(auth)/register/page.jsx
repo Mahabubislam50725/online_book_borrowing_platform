@@ -1,6 +1,7 @@
 "use client"
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
@@ -9,26 +10,24 @@ const RegisterPage = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
+    const router = useRouter();
+
     const hundleRegister = async (data) => {
         const { name, email, image, password } = data;
 
-        const {data:res,error } = await authClient.signUp.email({
-            name: name, // required
-            email: email, // required
-            password: password, // required
-            image: image,
-            callbackURL: "http://localhost:3000",
-        })
-        console.log(res, error);
+        const { data: res, error } = await authClient.signUp.email({
+            name,
+            email,
+            password,
+            image,
+        });
         if (error) {
-            console.error("Registration error:", error);
-            toast.error("Registration failed: " + error.message);
-          }
-        if (res) {
-            console.log("Registration successful:", res);
-            toast.success("Registration successful! Please check your email to verify your account.");
+            toast.error("Registration failed: " + (error.message || error.statusText));
         }
-
+        if (res) {
+            toast.success("Registration successful!");
+            setTimeout(() => router.push('/login'), 1500);
+        }
     }
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100">

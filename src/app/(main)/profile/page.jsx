@@ -3,11 +3,23 @@ import { authClient } from '@/lib/auth-client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const ProfilePage = () => {
-    const { data: session } = authClient.useSession();
+    const { data: session, isPending } = authClient.useSession();
     const user = session?.user;
     const router = useRouter();
+    const [borrowedCount, setBorrowedCount] = useState(0);
+
+    useEffect(() => {
+        if (user) {
+            fetch('/api/borrow')
+                .then(res => res.json())
+                .then(data => setBorrowedCount(Array.isArray(data) ? data.length : 0));
+        }
+    }, [user]);
+
+    if (isPending) return <div className="min-h-screen flex items-center justify-center"><p className="text-gray-400">Loading...</p></div>;
 
     if (!user) {
         return (
@@ -46,7 +58,7 @@ const ProfilePage = () => {
 
                         <div className="grid grid-cols-2 gap-4 w-full mb-6">
                             <div className="bg-blue-50 rounded-2xl p-4 text-center">
-                                <p className="text-2xl font-extrabold text-blue-600">0</p>
+                                <p className="text-2xl font-extrabold text-blue-600">{borrowedCount}</p>
                                 <p className="text-xs text-gray-500 mt-1">Books Borrowed</p>
                             </div>
                             <div className="bg-purple-50 rounded-2xl p-4 text-center">
@@ -56,8 +68,14 @@ const ProfilePage = () => {
                         </div>
 
                         <Link
-                            href="/"
+                            href="/profile/update"
                             className="w-full text-center bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-3 rounded-2xl transition-all duration-200 shadow-md mb-3 block"
+                        >
+                            ✏️ Update Information
+                        </Link>
+                        <Link
+                            href="/"
+                            className="w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-3 rounded-2xl transition-all duration-200 shadow-md mb-3 block"
                         >
                             🏠 Go to Home
                         </Link>

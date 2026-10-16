@@ -2,6 +2,7 @@ import { getBooksDetails } from '@/lib/data';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import BorrowButton from '@/app/component/shared/BorrowButton';
 
 const BooksDetails = async ({ params }) => {
     const { id } = await params;
@@ -55,9 +56,7 @@ const BooksDetails = async ({ params }) => {
                                 </div>
                             </div>
 
-                            <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 rounded-2xl transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-base">
-                                📖 Borrow This Book
-                            </button>
+                            <BorrowButton available={book.available_quantity} bookId={book.id} bookTitle={book.title} />
                         </div>
                     </div>
                 </div>

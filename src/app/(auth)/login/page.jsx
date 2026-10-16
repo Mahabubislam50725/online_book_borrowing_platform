@@ -1,6 +1,7 @@
 'use client';
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
@@ -8,25 +9,20 @@ import { toast, ToastContainer } from 'react-toastify';
 const LoginPage = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const router = useRouter();
 
     const hundleLogin = async (data) => {
-        console.log(data);
-
         const { data: res, error } = await authClient.signIn.email({
-            email: data.email, // required
-            password: data.password, // required
+            email: data.email,
+            password: data.password,
             rememberMe: true,
-            callbackURL: "/",
         });
         if (error) {
-            console.error("Login error:", error);
-            toast.error("Login failed: " + error.message);
-
+            toast.error("Login failed: " + (error.message || error.statusText));
         }
         if (res) {
-            console.log("Login successful:", res);
             toast.success("Login successful!");
-
+            setTimeout(() => router.push('/'), 1500);
         }
     }
 
