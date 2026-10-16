@@ -4,7 +4,7 @@ A modern web application that digitizes the traditional library experience. User
 
 ## 🔗 Live URL
 
-https://online-book-borrowing-platform-rn6l.vercel.app
+[https://online-book-borrowing-platform-rn6l.vercel.app](https://online-book-borrowing-platform-rn6l.vercel.app)
 
 ## ✨ Key Features
 
